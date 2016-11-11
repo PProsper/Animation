@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Mouse</title>
+	<style type="text/css">
+		header{
+			position: fixed;
+		}
+		body{
+			width:100%; 
+			margin:0%;
+			background-color: green;
+		}
+		#nav{
+			margin-right: 50%;
+		}
+		ul li{
+			display: inline;
+			list-style: none;
+			margin-left: 200%;
+			margin-top: 700%;
+		}
+		ul{
+			width: 100%;
+			height:100%;
+		}
+		.na{
+			margin-top: 110%;
+		}
+		li a{
+			display:block;
+			color: white;
+			text-align:center;
+			margin-top: 1%;
+			padding: 30px 20px;
+			font-size-adjust: 10px;
+			font-family: block;
+			font-weight: bold;
+		}
+		#cathouse{
+			margin-top: 600%;
+			margin-right: 400%;
+			position: absolute;
+			width: 250pt; 
+			height: 200pt;
+		}
+		.cathouse{
+			position: absolute;
+			display: inline-block;
+		}
+		.cathouse a:hover{
+			background-color: #F7B50C;
+			border-radius: 25px;
+		}
+		.cathouse:hover .highlight{
+			display:block;
+		}
+		.highlight{
+			border-radius: 25px;
+			display:none;
+			position:absolute;
+			background-color: #7C6316;
+			min-width: 1px;
+			box-shadow:0 8px 16px 0 rgba(0,0,0,0.2);
+		}
+		.highlight a{
+			display: block;
+			text-align:left;
+		}
+		.highlight a:hover{
+			background-color:black;
+		}
+		#clouds{
+			position: absolute;
+		}
+		#house{
+			position: absolute;
+			margin-left:30%;
+			margin-top: 5%;
+		}
+		#click{
+			margin-top: 2%;
+			margin-left: 100%;
+			border-radius: 25px;
+			color:red;
+		}
+		#butt{
+			position: absolute;
+			margin-top: 50%;
+			margin-right: 200%;
+
+		}
+		#mouse{
+			height:50px;
+			width:50px;
+			margin-top: 55%;
+			border-radius: 25px;
+			position: absolute;
+		}
+		#outer{
+			margin: 0 0 0 0;
+			height: 20px;
+			width: 100%;
+			position: relative;
+		}
+		footer{
+			height: 100%;
+			width: 100%;
+			margin-bottom: 50%;
+			background-color: green;
+		}
+	</style>
+</head>
+<header>
+<div>
+	<img id="clouds" src="clouds.png" width="2000" height="400">
+</div>
+<div id="nav">
+<img id="cathouse" src="cathouse.png">
+<ul>
+	<li class="cathouse"> <a class="na" href="links"> Home </a>
+		<div class= "highlight">
+			<a href="links"> Cat </a>
+			<a href="links"> Mouse </a>
+			<a href="links"> Play </a>
+		</div>
+	</li>
+</div>
+</header>
+<body>
+	<center>
+		<div id="outer"> 
+			<div id="mouse"> 
+				<img style="-webkit-user-select: none" src="http://bestanimations.com/Animals/Mammals/animated-mouse-gif.gif" width="75" height="75">
+			</div>
+		</div>
+		<div id="butt">
+			<button id="click" onclick="move()"> See Mouse Scurry </button>
+		</div>
+	</center>
+
+<div>
+	<img id="house" src="house.png" width="900" height="750" style="">
+</div>
+
+</body>
+<footer>
+
+</footer>
+	<script type="text/javascript">
+		function move(){
+			var elem = document.getElementById("mouse");
+			var pos = 0;
+			var id = setInterval(frame, 10);
+			function frame(){
+				if (pos == 2000){
+					clearInterval(id);
+				} else{
+					pos++;
+					elem.style.left = pos + "px";
+					elem.style.right = pos + "px";
+					elem.style.left = pos + "px";
+					elem.style.right = pos + "px";
+				}
+			}
+		}
+	</script>
+</html>
